@@ -4,5 +4,12 @@ export async function middleware(req) {
   const { locale, pathname } = req.nextUrl;
   console.log("middleware: ", pathname);
 
-  return NextResponse.next();
+  const requestHeaders = new Headers(req.headers);
+  requestHeaders.delete("x-middleware-prefetch");
+
+  return NextResponse.next({
+    request: {
+      headers: requestHeaders,
+    },
+  });
 }
