@@ -21,6 +21,8 @@ export async function getStaticProps({ params }) {
   );
   const post = await res.json();
 
+  console.log("Generating page for post:", post.id);
+
   return {
     props: {
       post,
