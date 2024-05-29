@@ -10,7 +10,7 @@ export async function getServerSideProps({ params }) {
   );
   const post = await res.json();
 
-  console.log("Generating page for post:", post.id);
+  console.log("[SSR] Generating page for post:", post.id);
 
   return {
     props: {
