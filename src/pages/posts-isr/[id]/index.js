@@ -29,7 +29,7 @@ export async function getStaticProps({ params }) {
     };
   }
 
-  console.log("Generating page for post:", post.id);
+  console.log("[ISR] Generating page for post:", params.id);
 
   return {
     props: {
