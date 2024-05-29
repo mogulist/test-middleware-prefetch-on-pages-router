@@ -10,7 +10,7 @@ async function fetchPost(id) {
 }
 
 export async function getStaticPaths() {
-  const paths = Array.from({ length: 99 }, (_, i) => ({
+  const paths = Array.from({ length: 10 }, (_, i) => ({
     params: { id: (i + 1).toString() },
   }));
 
