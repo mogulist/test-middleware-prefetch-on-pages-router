@@ -30,6 +30,8 @@ export async function getStaticProps({ params }) {
   }
 
   console.log("[ISR] Generating page for post:", params.id);
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+  console.log("    timeout:", params.id);
 
   return {
     props: {
