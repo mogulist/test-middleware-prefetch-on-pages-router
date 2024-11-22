@@ -21,7 +21,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const post = await fetchPost(Number(params.id) % 100);
+  const post = await fetchPost(Math.floor(Math.random() * 100) + 1);
 
   if (!post) {
     return {
