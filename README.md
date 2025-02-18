@@ -1,3 +1,5 @@
+# Minimal reproducible example of strange behavior of prefetch in pages router regading middleware
+
 This project demonstrates the behavior of prefetch in Next.js pages router with and without middleware.
 
 `/posts` contains links to static pages. Prefetch works correctly regardless of the presence of middleware.
